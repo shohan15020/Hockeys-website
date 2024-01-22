@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hockeys website</title>
+    <!-- tailwind and daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/dec77c62b7.js" crossorigin="anonymous"></script>
+    <!-- custom color -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "color-1": '#131318',
+                        "color-2": 'rgba(19, 19, 24, 0.60)',
+                        "color-3": 'rgba(255, 255, 255, 0.60)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .font-manrope {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body class="font-manrope">
+    <header>
+
+    </header>
+    <main class="my-[100px] container mx-auto">
+        <!-- professional Hockeys club -->
+        <section class="text-center">
+            <div class="divider"></div>
+            <div class="my-8">
+                <h3 class="text-4xl font-extrabold text-color-1 mb-6">Professional Hockeys Club</h3>
+                <p class="text-color-2">The game has many rules that need to be followed by each team so that a fair
+                play can be conducted.</p>
+            </div>
+            <div class="divider"></div>
+            <!-- process -->
+            <div class="flex flex-col lg:flex-row gap-8 justify-around items-center">
+                <!-- process1 -->
+                <div>
+                    <div class="radial-progress text-red-500" style="--value:87;" role="progressbar"><span class="text-color-1">87%</span></div>
+                    <h4 class="text-color-1 text-xl font-semibold mt-6 mb-4">Prayer Facility</h4>
+                    <p class="text-color-2">we are providing special facility</p>
+                </div>
+                <!-- process2-->
+                <div>
+                    <div class="radial-progress text-teal-400" style="--value:95;" role="progressbar"><span class="text-color-1">95%</span></div>
+                    <h4 class="text-color-1 text-xl font-semibold mt-6 mb-4">Experienced Coach</h4>
+                    <p class="text-color-2">we have experienced coach</p>
+                </div>
+                <!-- process3-->
+                <div>
+                    <div class="radial-progress text-yellow-400" style="--value:90;" role="progressbar"><span class="text-color-1">90%</span></div>
+                    <h4 class="text-color-1 text-xl font-semibold mt-6 mb-4">Senior Player</h4>
+                    <p class="text-color-2">There are a lot of senior player</p>
+                </div>
+                <!-- process4 -->
+                <div>
+                    <div class="radial-progress text-sky-500" style="--value:80;" role="progressbar"><span class="text-color-1">80%</span></div>
+                    <h4 class="text-color-1 text-xl font-semibold mt-6 mb-4">Training Ground</h4>
+                    <p class="text-color-2">we are providing training ground</p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+</body>
+
+</html>
