@@ -22,7 +22,8 @@
                     colors: {
                         "color-1": '#131318',
                         "color-2": 'rgba(19, 19, 24, 0.60)',
-                        "color-3": 'rgba(255, 255, 255, 0.60)'
+                        "color-3": 'rgba(255, 255, 255, 0.60)',
+                        "btn-color": '#FF4240'
                     }
                 }
             }
@@ -37,15 +38,110 @@
 </head>
 
 <body class="font-manrope">
-    <header>
+    <header class="container mx-auto px-5 ">
+        <!-- nav  -->
+        <nav class="navbar bg-base-100">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a class="text-btn-color">Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Pages</a></li>
+                        <li><a>Blog</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost text-2xl lg:text-4xl font-extrabold -ml-5">Hockey<span
+                        class="text-btn-color">’</span>s</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class=" menu menu-horizontal px-1">
+                    <li><a class="text-btn-color">Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Pages</a></li>
+                    <li><a>Blog</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <button class="btn btn-ghost btn-circle lg:mr-6 hidden lg:flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#89898B]" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
+                <button class="btn text-white bg-[#FF4240] py-2 px-5 font-bold text-xl border-none">Get Ticket</button>
+            </div>
+        </nav>
+        <!-- banner -->
+        <div class="mt-12  relative">
+            <div class="carousel w-full h-[200px] lg:h-[550px]">
+                <div id="slide1"
+                    class="carousel-item relative w-full bg-[url('./Images/1.png')] bg-no-repeat bg-cover rounded-2xl">
 
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4" class="btn btn-circle bg-black text-white border-none">❮</a>
+                        <a href="#slide2" class="btn btn-circle bg-black text-white border-none">❯</a>
+                    </div>
+                </div>
+
+                <div id="slide2" class="carousel-item relative w-full bg-[url('./Images/banner2.jpg')] bg-no-repeat bg-cover rounded-2xl">
+                    
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle bg-black text-white border-none">❮</a>
+                        <a href="#slide3" class="btn btn-circle bg-black text-white border-none">❯</a>
+                    </div>
+                </div>
+
+                <div id="slide3" class="carousel-item relative w-full bg-[url('./Images/banner3.jpg')] bg-no-repeat bg-cover rounded-2xl">
+                    
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle bg-black text-white border-none">❮</a>
+                        <a href="#slide4" class="btn btn-circle bg-black text-white border-none">❯</a>
+                    </div>
+                </div>
+
+                <div id="slide4" class="carousel-item relative w-full bg-[url('./Images/banner4.jpg')] bg-no-repeat bg-cover rounded-2xl">
+                    
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" class="btn btn-circle bg-black text-white border-none">❮</a>
+                        <a href="#slide1" class="btn btn-circle bg-black text-white border-none">❯</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="hidden lg:flex lg:flex-col p-4 lg:p-8 absolute right-8
+            bottom-8 w-[50%] justify-start items-center rounded-2xl text-white bg-color-1">
+                <h2 class="text-2xl font-extrabold">Meet all the heroes from the field</h2>
+                <p class="text-color-3 font-medium mt-4">One of the best chances you have of meeting a single hockey
+                    player is at the team's home .</p>
+            </div>
+
+            <!-- discount -->
+            <div class="block lg:hidden  p-4  
+                w-[full] mt-4 rounded-2xl text-white bg-color-1">
+                <h2 class="text-2xl font-extrabold">Meet all the heroes from the field</h2>
+                <p class="text-color-3 font-medium mt-4">One of the best chances you have of meeting a single hockey player is at the team's home .</p>
+            </div>
+        </div>
     </header>
-    <main class="my-[100px] container mx-auto px-5">
+
+    <main class="my-10 lg:my-[100px] container mx-auto px-5 ">
+
         <!-- professional Hockeys club -->
-        <section class="text-center mt-24">
+        <section class="text-center mt-10 lg:mt-24 ">
             <div class="divider"></div>
             <div class="my-8">
-                <h3 class="text-4xl font-extrabold text-color-1 mb-6">Professional Hockeys Club</h3>
+                <h3 class="text-2xl lg:text-4xl font-extrabold text-color-1 mb-6">Professional Hockeys Club</h3>
                 <p class="text-color-2">The game has many rules that need to be followed by each team so that a fair
                     play can be conducted.</p>
             </div>
@@ -83,10 +179,10 @@
             </div>
         </section>
         <!-- program section -->
-        <section class="mt-24">
+        <section class="mt-10 lg:mt-24">
             <div class="divider"></div>
             <div class="my-8 text-center">
-                <h3 class="text-4xl font-extrabold text-color-1 mb-6">Professional Hockeys Club</h3>
+                <h3 class="text-2xl lg:text-4xl font-extrabold text-color-1 mb-6">Professional Hockeys Club</h3>
                 <p class="text-color-2">The game has many rules that need to be followed by each team so that a fair
                     play can be conducted.</p>
             </div>
@@ -94,33 +190,39 @@
             <!-- grid -->
             <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
                 <!-- 1st card -->
-                <div class=" lg:h-[330px] bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(19,19,24,0.50)),url('./Images/2.png')] bg-no-repeat bg-cover rounded-2xl">
+                <div
+                    class=" lg:h-[330px] bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(19,19,24,0.50)),url('./Images/2.png')] bg-no-repeat bg-cover rounded-2xl">
                     <div class="pt-24 pb-10 px-10 text-white">
                         <h3 class="text-3xl font-extrabold">Junior Program</h3>
-                        <p class="font-medium mt-4 mb-6">Field Hockey is the most popular outdoor game played in a stadium, on plain grass, or on
-                        synthetic material.</p>
+                        <p class="font-medium mt-4 mb-6">Field Hockey is the most popular outdoor game played in a
+                            stadium, on plain grass, or on
+                            synthetic material.</p>
                         <button class="btn text-white bg-[#FF4240] py-3 px-5 font-bold text-xl border-none">Register
-                        Now!</button>
+                            Now!</button>
                     </div>
                 </div>
                 <!-- card 2-->
-                <div class=" lg:h-[330px] bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(19,19,24,0.50)),url('./Images/3.png')] bg-no-repeat bg-cover rounded-2xl">
+                <div
+                    class=" lg:h-[330px] bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(19,19,24,0.50)),url('./Images/3.png')] bg-no-repeat bg-cover rounded-2xl">
                     <div class="pt-24 pb-10 px-10 text-white">
                         <h3 class="text-3xl font-extrabold">Teenager Program</h3>
-                        <p class="font-medium mt-4 mb-6">Field Hockey is the most popular outdoor game played in a stadium, on plain grass, or on
-                        synthetic material.</p>
+                        <p class="font-medium mt-4 mb-6">Field Hockey is the most popular outdoor game played in a
+                            stadium, on plain grass, or on
+                            synthetic material.</p>
                         <button class="btn text-white bg-[#FF4240] py-3 px-5 font-bold text-xl border-none">Register
-                        Now!</button>
+                            Now!</button>
                     </div>
                 </div>
                 <!--  card 3-->
-                <div class="lg:col-span-2  lg:h-[450px] bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(19,19,24,0.50)),url('./Images/4.png')] bg-no-repeat bg-cover rounded-2xl">
+                <div
+                    class="lg:col-span-2  lg:h-[450px] bg-[linear-gradient(45deg,rgba(0,0,0,0.4),rgba(19,19,24,0.50)),url('./Images/4.png')] bg-no-repeat bg-cover rounded-2xl">
                     <div class="pt-24 lg:pt-52 pb-10 px-10 text-white">
                         <h3 class="text-3xl font-extrabold">Professional Program</h3>
-                        <p class="font-medium mt-4 mb-6">Field Hockey is the most popular outdoor game played in a stadium, on plain grass, or on
-                        synthetic material.</p>
+                        <p class="font-medium mt-4 mb-6">Field Hockey is the most popular outdoor game played in a
+                            stadium, on plain grass, or on
+                            synthetic material.</p>
                         <button class="btn text-white bg-[#FF4240] py-3 px-5 font-bold text-xl border-none">Register
-                        Now!</button>
+                            Now!</button>
                     </div>
                 </div>
                 <!--  card 4-->
@@ -130,19 +232,21 @@
             </div>
         </section>
         <!-- our new product -->
-        <section class="mt-24">
+        <section class="mt-10 lg:mt-24">
             <div class="divider"></div>
             <div class="my-8 text-center">
                 <h3 class="text-4xl font-extrabold text-color-1 mb-6">Our New Products</h3>
                 <p class="text-color-2">The game has many rules that need to be followed by each team so that a fair
-                play can be conducted.</p>
+                    play can be conducted.</p>
             </div>
             <div class="divider"></div>
             <!-- new product -->
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <!-- product 1 -->
-                <div class="flex flex-col justify-center items-center lg:flex-row gap-5 border-2 border-[color-2] p-6 rounded-2xl">
-                    <div class="h-full lg:w-[50%]"><img class="h-full w-full object-contain" src="Images/5.png" alt=""></div>
+                <div
+                    class="flex flex-col justify-center items-center lg:flex-row gap-5 border-2 border-[color-2] p-6 rounded-2xl">
+                    <div class="h-full lg:w-[50%]"><img class="h-full w-full object-contain" src="Images/5.png" alt="">
+                    </div>
                     <div class="space-y-4 ">
                         <p class="flex gap-4">
                             <span class="flex gap-2"><img src="Images/Frame.png" alt="">5.0</span>
@@ -150,16 +254,20 @@
                             <span class="flex gap-2"><img src="Images/Frame(2).png" alt="">200</span>
                         </p>
                         <h3 class="text-xl font-extrabold text-color-1">World Cup Flags Football</h3>
-                        <p class="text-color-2 font-medium"> To play hockey: Helmets, neck guards, shoulder pads, elbow pads, jockstraps</p>
+                        <p class="text-color-2 font-medium"> To play hockey: Helmets, neck guards, shoulder pads, elbow
+                            pads, jockstraps</p>
                         <div class="flex gap-5">
                             <span class="text-red-600">Price - $22.00</span>
-                            <span class="text-color-2 flex gap-2"><img class="object-contain" src="Images/Frame4.png" alt="">Delivery Fee : Free</span>
+                            <span class="text-color-2 flex gap-2"><img class="object-contain" src="Images/Frame4.png"
+                                    alt="">Delivery Fee : Free</span>
                         </div>
                     </div>
                 </div>
                 <!-- product 2 -->
-                <div class="flex flex-col justify-center items-center lg:flex-row gap-5 border-2 border-[color-2] p-6 rounded-2xl">
-                    <div class="h-full lg:w-[50%]"><img class="h-full w-full object-contain" src="Images/6.png" alt=""></div>
+                <div
+                    class="flex flex-col justify-center items-center lg:flex-row gap-5 border-2 border-[color-2] p-6 rounded-2xl">
+                    <div class="h-full lg:w-[50%]"><img class="h-full w-full object-contain" src="Images/6.png" alt="">
+                    </div>
                     <div class="space-y-4 ">
                         <p class="flex gap-4">
                             <span class="flex gap-2"><img src="Images/Frame.png" alt="">5.0</span>
@@ -167,16 +275,20 @@
                             <span class="flex gap-2"><img src="Images/Frame(2).png" alt="">200</span>
                         </p>
                         <h3 class="text-xl font-extrabold text-color-1">World Cup Flags Football</h3>
-                        <p class="text-color-2 font-medium"> To play hockey: Helmets, neck guards, shoulder pads, elbow pads, jockstraps</p>
+                        <p class="text-color-2 font-medium"> To play hockey: Helmets, neck guards, shoulder pads, elbow
+                            pads, jockstraps</p>
                         <div class="flex gap-5">
                             <span class="text-red-600">Price - $22.00</span>
-                            <span class="text-color-2 flex gap-2"><img class="object-contain" src="Images/Frame4.png" alt="">Delivery Fee : Free</span>
+                            <span class="text-color-2 flex gap-2"><img class="object-contain" src="Images/Frame4.png"
+                                    alt="">Delivery Fee : Free</span>
                         </div>
                     </div>
                 </div>
                 <!-- product 3 -->
-                <div class="flex flex-col justify-center items-center lg:flex-row gap-5 border-2 border-[color-2] p-6 rounded-2xl">
-                    <div class="h-full lg:w-[50%]"><img class="h-full w-full object-contain" src="Images/7.png" alt=""></div>
+                <div
+                    class="flex flex-col justify-center items-center lg:flex-row gap-5 border-2 border-[color-2] p-6 rounded-2xl">
+                    <div class="h-full lg:w-[50%]"><img class="h-full w-full object-contain" src="Images/7.png" alt="">
+                    </div>
                     <div class="space-y-4 ">
                         <p class="flex gap-4">
                             <span class="flex gap-2"><img src="Images/Frame.png" alt="">5.0</span>
@@ -184,16 +296,20 @@
                             <span class="flex gap-2"><img src="Images/Frame(2).png" alt="">200</span>
                         </p>
                         <h3 class="text-xl font-extrabold text-color-1">World Cup Flags Football</h3>
-                        <p class="text-color-2 font-medium"> To play hockey: Helmets, neck guards, shoulder pads, elbow pads, jockstraps</p>
+                        <p class="text-color-2 font-medium"> To play hockey: Helmets, neck guards, shoulder pads, elbow
+                            pads, jockstraps</p>
                         <div class="flex gap-5">
                             <span class="text-red-600">Price - $22.00</span>
-                            <span class="text-color-2 flex gap-2"><img class="object-contain" src="Images/Frame4.png" alt="">Delivery Fee : Free</span>
+                            <span class="text-color-2 flex gap-2"><img class="object-contain" src="Images/Frame4.png"
+                                    alt="">Delivery Fee : Free</span>
                         </div>
                     </div>
                 </div>
                 <!-- product 4 -->
-                <div class="flex flex-col justify-center items-center lg:flex-row gap-5 border-2 border-[color-2] p-6 rounded-2xl">
-                    <div class="h-full lg:w-[50%]"><img class="h-full w-full object-contain" src="Images/8.png" alt=""></div>
+                <div
+                    class="flex flex-col justify-center items-center lg:flex-row gap-5 border-2 border-[color-2] p-6 rounded-2xl">
+                    <div class="h-full lg:w-[50%]"><img class="h-full w-full object-contain" src="Images/8.png" alt="">
+                    </div>
                     <div class="space-y-4 ">
                         <p class="flex gap-4">
                             <span class="flex gap-2"><img src="Images/Frame.png" alt="">5.0</span>
@@ -201,16 +317,20 @@
                             <span class="flex gap-2"><img src="Images/Frame(2).png" alt="">200</span>
                         </p>
                         <h3 class="text-xl font-extrabold text-color-1">World Cup Flags Football</h3>
-                        <p class="text-color-2 font-medium"> To play hockey: Helmets, neck guards, shoulder pads, elbow pads, jockstraps</p>
+                        <p class="text-color-2 font-medium"> To play hockey: Helmets, neck guards, shoulder pads, elbow
+                            pads, jockstraps</p>
                         <div class="flex gap-5">
                             <span class="text-red-600">Price - $22.00</span>
-                            <span class="text-color-2 flex gap-2"><img class="object-contain" src="Images/Frame4.png" alt="">Delivery Fee : Free</span>
+                            <span class="text-color-2 flex gap-2"><img class="object-contain" src="Images/Frame4.png"
+                                    alt="">Delivery Fee : Free</span>
                         </div>
                     </div>
                 </div>
                 <!-- product 5 -->
-                <div class="flex flex-col justify-center items-center lg:flex-row gap-5 border-2 border-[color-2] p-6 rounded-2xl">
-                    <div class="h-full lg:w-[50%]"><img class="h-full w-full object-contain" src="Images/9.png" alt=""></div>
+                <div
+                    class="flex flex-col justify-center items-center lg:flex-row gap-5 border-2 border-[color-2] p-6 rounded-2xl">
+                    <div class="h-full lg:w-[50%]"><img class="h-full w-full object-contain" src="Images/9.png" alt="">
+                    </div>
                     <div class="space-y-4 ">
                         <p class="flex gap-4">
                             <span class="flex gap-2"><img src="Images/Frame.png" alt="">5.0</span>
@@ -218,16 +338,20 @@
                             <span class="flex gap-2"><img src="Images/Frame(2).png" alt="">200</span>
                         </p>
                         <h3 class="text-xl font-extrabold text-color-1">World Cup Flags Football</h3>
-                        <p class="text-color-2 font-medium"> To play hockey: Helmets, neck guards, shoulder pads, elbow pads, jockstraps</p>
+                        <p class="text-color-2 font-medium"> To play hockey: Helmets, neck guards, shoulder pads, elbow
+                            pads, jockstraps</p>
                         <div class="flex gap-5">
                             <span class="text-red-600">Price - $22.00</span>
-                            <span class="text-color-2 flex gap-2"><img class="object-contain" src="Images/Frame4.png" alt="">Delivery Fee : Free</span>
+                            <span class="text-color-2 flex gap-2"><img class="object-contain" src="Images/Frame4.png"
+                                    alt="">Delivery Fee : Free</span>
                         </div>
                     </div>
                 </div>
                 <!-- product 6 -->
-                <div class="flex flex-col justify-center items-center lg:flex-row gap-5 border-2 border-[color-2] p-6 rounded-2xl">
-                    <div class="h-full lg:w-[50%]"><img class="h-full w-full object-contain" src="Images/10.png" alt=""></div>
+                <div
+                    class="flex flex-col justify-center items-center lg:flex-row gap-5 border-2 border-[color-2] p-6 rounded-2xl">
+                    <div class="h-full lg:w-[50%]"><img class="h-full w-full object-contain" src="Images/10.png" alt="">
+                    </div>
                     <div class="space-y-4 ">
                         <p class="flex gap-4">
                             <span class="flex gap-2"><img src="Images/Frame.png" alt="">5.0</span>
@@ -235,10 +359,91 @@
                             <span class="flex gap-2"><img src="Images/Frame(2).png" alt="">200</span>
                         </p>
                         <h3 class="text-xl font-extrabold text-color-1">World Cup Flags Football</h3>
-                        <p class="text-color-2 font-medium"> To play hockey: Helmets, neck guards, shoulder pads, elbow pads, jockstraps</p>
+                        <p class="text-color-2 font-medium"> To play hockey: Helmets, neck guards, shoulder pads, elbow
+                            pads, jockstraps</p>
                         <div class="flex gap-5">
                             <span class="text-red-600">Price - $22.00</span>
-                            <span class="text-color-2 flex gap-2"><img class="object-contain" src="Images/Frame4.png" alt="">Delivery Fee : Free</span>
+                            <span class="text-color-2 flex gap-2"><img class="object-contain" src="Images/Frame4.png"
+                                    alt="">Delivery Fee : Free</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Clients Question -->
+        <section class="mt-10 lg:mt-24">
+            <div class="divider"></div>
+            <div class="my-8 text-center hidden">
+                <h3 class="text-4xl font-extrabold text-color-1 mb-6">Clients Question</h3>
+                <p class="text-color-2">The game has many rules that need to be followed by each team so that a fair
+                    play can be conducted.</p>
+            </div>
+            <div class="divider"></div>
+            <!-- question container -->
+            <div
+                class="flex flex-col lg:flex-row gap-10 lg:p-8 justify-center border-2 rounded-2xl border-[rgba(19, 19, 24, 0.10)] ">
+                <div class=""><img src="Images/11.png" alt=""></div>
+                <!-- accordion -->
+                <div class="lg:flex-1 ">
+                    <div class="collapse collapse-plus bg-base-200 ">
+                        <input type="radio" name="my-accordion-3" checked="checked" />
+                        <div class="collapse-title text-xl font-bold text-color-1  lg:py-5">
+                            Our Equipment
+                        </div>
+                        <div class="collapse-content">
+                            <p>The players wear ice skates on their feet, and it helps them skate on the ice at a
+                                very
+                                high speed and play the game.</p>
+                        </div>
+                    </div>
+                    <div class="collapse collapse-plus bg-base-200 ">
+                        <input type="radio" name="my-accordion-3" />
+                        <div class="collapse-title text-xl font-bold text-color-1  lg:py-5">
+                            Hockey Training
+                        </div>
+                        <div class="collapse-content">
+                            <p>The players wear ice skates on their feet,and it helps them skate on the ice at a
+                                very high speed and play the game.</p>
+                        </div>
+                    </div>
+                    <div class="collapse collapse-plus bg-base-200">
+                        <input type="radio" name="my-accordion-3" />
+                        <div class="collapse-title text-xl font-bold text-color-1 lg:py-5">
+                            Private Lessons
+                        </div>
+                        <div class="collapse-content">
+                            <p>The players wear ice skates on their feet,and it helps them skate on the ice at a
+                                very high speed and play the game.</p>
+                        </div>
+                    </div>
+                    <div class="collapse collapse-plus bg-base-200 ">
+                        <input type="radio" name="my-accordion-3" />
+                        <div class="collapse-title text-xl font-bold text-color-1 lg:py-5">
+                            Ski Touring
+                        </div>
+                        <div class="collapse-content">
+                            <p>The players wear ice skates on their feet,and it helps them skate on the ice at a
+                                very high speed and play the game.</p>
+                        </div>
+                    </div>
+                    <div class="collapse collapse-plus bg-base-200 ">
+                        <input type="radio" name="my-accordion-3" />
+                        <div class="collapse-title text-xl font-bold text-color-1 lg:py-5">
+                            Booking
+                        </div>
+                        <div class="collapse-content">
+                            <p>The players wear ice skates on their feet, and it helps them skate on the ice at a
+                                very high speed and play the game.</p>
+                        </div>
+                    </div>
+                    <div class="collapse collapse-plus bg-base-200 ">
+                        <input type="radio" name="my-accordion-3" />
+                        <div class="collapse-title text-xl font-bold text-color-1 lg:py-5">
+                            Pricings
+                        </div>
+                        <div class="collapse-content">
+                            <p>The players wear ice skates on their feet, and it helps them skate on the ice at a
+                                very high speed and play the game.</p>
                         </div>
                     </div>
                 </div>
